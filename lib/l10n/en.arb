@@ -1,3 +1,6 @@
 {
- "@@locale": "en"
+ "@@locale": "en",
+ "mainScreenText" : "Learn languages whenever and whenever you want. It’s free and forever",
+ "getStarted" : "Get Started",
+ "iAlreadyHaveAnAccount" : "I already have an account"
 }
