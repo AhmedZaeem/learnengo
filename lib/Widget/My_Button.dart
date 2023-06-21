@@ -26,7 +26,7 @@ class _My_ButtonState extends State<My_Button> {
         padding: EdgeInsets.symmetric(vertical: 16.h),
         alignment: Alignment.center,
         decoration: BoxDecoration(
-          color: widget.buttonColor ?? Theme.of(context).primaryColor,
+          color: widget.buttonColor ?? Theme.of(context).colorScheme.primary,
           borderRadius: BorderRadius.circular(16.r),
         ),
         child: Text(

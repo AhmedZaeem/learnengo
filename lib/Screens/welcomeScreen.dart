@@ -17,6 +17,7 @@ class _welcomeScreenState extends State<welcomeScreen> {
   Widget build(BuildContext context) {
     final AppLocalizations appLocale = AppLocalizations.of(context)!;
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -28,7 +29,7 @@ class _welcomeScreenState extends State<welcomeScreen> {
               Text(
                 'LearnEngo',
                 style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).colorScheme.primary,
                     fontSize: 32.sp,
                     fontWeight: FontWeight.bold),
               ),
@@ -36,16 +37,15 @@ class _welcomeScreenState extends State<welcomeScreen> {
               Text(
                 appLocale.mainScreenText,
                 textAlign: TextAlign.center,
-                style:
-                    TextStyle(color: const Color(0xff26272C), fontSize: 16.sp),
+                style: Theme.of(context).textTheme.bodyMedium,
               ),
               SizedBox(height: 106.h),
               My_Button(buttonText: appLocale.getStarted),
               SizedBox(height: 20.h),
               My_Button(
                 buttonText: appLocale.iAlreadyHaveAnAccount,
-                textColor: Theme.of(context).primaryColor,
-                buttonColor: Color(0xffEDF2FC),
+                textColor: Theme.of(context).colorScheme.primary,
+                buttonColor: Theme.of(context).colorScheme.secondary,
               )
             ],
           ),

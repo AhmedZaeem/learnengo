@@ -24,6 +24,7 @@ class _splashScreenState extends State<splashScreen> with Nav_Helper {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.background,
       body: Center(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w),
@@ -35,12 +36,12 @@ class _splashScreenState extends State<splashScreen> with Nav_Helper {
               Text(
                 'LearnEngo',
                 style: TextStyle(
-                    color: Theme.of(context).primaryColor,
+                    color: Theme.of(context).colorScheme.primary,
                     fontSize: 32.sp,
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(height: 183.h),
-              SpinKitFadingCircle(color: Theme.of(context).primaryColor)
+              SpinKitFadingCircle(color: Theme.of(context).colorScheme.primary)
             ],
           ),
         ),
