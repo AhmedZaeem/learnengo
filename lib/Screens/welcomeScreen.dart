@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:learnengo/Helpers/Nav_Helper.dart';
+import 'package:learnengo/Screens/onBoarding/onBoardingScreen.dart';
 import 'package:learnengo/Widget/My_Button.dart';
 
 import '../Widget/app_Icon.dart';
@@ -12,7 +14,7 @@ class welcomeScreen extends StatefulWidget {
   State<welcomeScreen> createState() => _welcomeScreenState();
 }
 
-class _welcomeScreenState extends State<welcomeScreen> {
+class _welcomeScreenState extends State<welcomeScreen> with Nav_Helper {
   @override
   Widget build(BuildContext context) {
     final AppLocalizations appLocale = AppLocalizations.of(context)!;
@@ -40,7 +42,9 @@ class _welcomeScreenState extends State<welcomeScreen> {
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
               SizedBox(height: 106.h),
-              My_Button(buttonText: appLocale.getStarted),
+              My_Button(
+                  buttonText: appLocale.getStarted,
+                  onTap: () => jump(context, const onBoardingScreen())),
               SizedBox(height: 20.h),
               My_Button(
                 buttonText: appLocale.iAlreadyHaveAnAccount,
