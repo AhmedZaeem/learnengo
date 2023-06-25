@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:learnengo/Widget/languageSelector.dart';
+import 'package:learnengo/Widget/CustomSelectorBTN.dart';
 
 class boarding_two extends StatefulWidget {
   const boarding_two({super.key});

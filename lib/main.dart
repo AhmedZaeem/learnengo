@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             theme: appThemes.lightTheme,
             darkTheme: appThemes.darkTheme,
-            themeMode: ThemeMode.system,
+            themeMode: appThemes.themeSelect,
             title: 'LearnEngo',
             localizationsDelegates: AppLocalizations.localizationsDelegates,
             supportedLocales: const [Locale('en')],

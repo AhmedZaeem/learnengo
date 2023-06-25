@@ -2,6 +2,11 @@
 class Assets {
   Assets._();
 
+  static const String fontsNunitoBold = 'assets/fonts/Nunito-Bold.ttf';
+  static const String fontsNunitoLight = 'assets/fonts/Nunito-Light.ttf';
+  static const String fontsNunitoMedium = 'assets/fonts/Nunito-Medium.ttf';
+  static const String fontsNunitoRegular = 'assets/fonts/Nunito-Regular.ttf';
+  static const String fontsNunitoSemiBold = 'assets/fonts/Nunito-SemiBold.ttf';
   static const String svgs01 = 'assets/images/svgs/01.svg';
   static const String svgs02 = 'assets/images/svgs/02.svg';
   static const String svgs03 = 'assets/images/svgs/03.svg';
@@ -13,6 +18,7 @@ class Assets {
   static const String svgs09 = 'assets/images/svgs/09.svg';
   static const String svgs10 = 'assets/images/svgs/10.svg';
   static const String svgsAppLogo = 'assets/images/svgs/app_logo.svg';
+  static const String svgsApple = 'assets/images/svgs/apple.svg';
   static const String svgsBag = 'assets/images/svgs/bag.svg';
   static const String svgsC1 = 'assets/images/svgs/c1.svg';
   static const String svgsC2 = 'assets/images/svgs/c2.svg';
@@ -20,8 +26,13 @@ class Assets {
   static const String svgsC4 = 'assets/images/svgs/c4.svg';
   static const String svgsCap = 'assets/images/svgs/cap.svg';
   static const String svgsChart = 'assets/images/svgs/chart.svg';
+  static const String svgsCheck = 'assets/images/svgs/check.svg';
   static const String svgsClock = 'assets/images/svgs/clock.svg';
   static const String svgsDescription = 'assets/images/svgs/description.svg';
+  static const String svgsEye = 'assets/images/svgs/eye.svg';
+  static const String svgsEyeoff = 'assets/images/svgs/eyeoff.svg';
+  static const String svgsFacebook = 'assets/images/svgs/facebook.svg';
+  static const String svgsGoogle = 'assets/images/svgs/google.svg';
   static const String svgsIN = 'assets/images/svgs/IN.svg';
   static const String svgsKR = 'assets/images/svgs/KR.svg';
   static const String svgsMC = 'assets/images/svgs/MC.svg';

@@ -15,7 +15,8 @@ class boarding_four extends StatelessWidget {
         borderRadius: BorderRadius.circular(16.r),
         border: Border.all(width: 1.w, color: const Color(0xffBDC0C7)),
       ),
-      padding: EdgeInsetsDirectional.only(start: 22.w, top: 23.h, bottom: 20.h),
+      padding: EdgeInsetsDirectional.only(
+          start: 22.w, top: 23.h, bottom: 20.h, end: 40.w),
       child: Column(
         children: [
           _element(context,
@@ -48,19 +49,21 @@ class boarding_four extends StatelessWidget {
           children: [
             SvgPicture.asset('assets/images/svgs/$icon.svg'),
             SizedBox(width: 14.w),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  title,
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  subTitle,
-                  style: Theme.of(context).textTheme.bodySmall,
-                ),
-              ],
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    title,
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    subTitle,
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -69,7 +72,6 @@ class boarding_four extends StatelessWidget {
             : Divider(
                 height: 40.h,
                 thickness: .5,
-                endIndent: 25.w,
                 color: const Color(0xffBDC0C7),
               )
       ],

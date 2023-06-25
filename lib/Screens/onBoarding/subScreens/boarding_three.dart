@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../Widget/languageSelector.dart';
+import '../../../Widget/CustomSelectorBTN.dart';
 
 class boarding_three extends StatefulWidget {
   const boarding_three({super.key});

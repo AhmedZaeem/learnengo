@@ -3,12 +3,12 @@ import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:learnengo/Helpers/Nav_Helper.dart';
-import 'package:learnengo/Screens/loginScreen.dart';
 import 'package:learnengo/Screens/onBoarding/subScreens/boarding_five.dart';
 import 'package:learnengo/Screens/onBoarding/subScreens/boarding_four.dart';
 import 'package:learnengo/Screens/onBoarding/subScreens/boarding_one.dart';
 import 'package:learnengo/Screens/onBoarding/subScreens/boarding_three.dart';
 import 'package:learnengo/Screens/onBoarding/subScreens/boarding_two.dart';
+import 'package:learnengo/Screens/onBoardingFinish.dart';
 import 'package:learnengo/Widget/My_Button.dart';
 
 class onBoardingScreen extends StatefulWidget {
@@ -114,11 +114,11 @@ class _onBoardingScreenState extends State<onBoardingScreen> with Nav_Helper {
                     index++;
                   });
                 } else {
-                  jump(context, const loginScreen(), replace: true);
+                  jump(context, const onBoardingFinish(), replace: true);
                 }
               },
             ),
-            SizedBox(height: 34.h),
+            SizedBox(height: 8.h),
           ],
         ),
       ),

@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:learnengo/Helpers/Nav_Helper.dart';
 import 'package:learnengo/Screens/login/loginScreen.dart';
-import 'package:learnengo/Screens/onBoarding/onBoardingScreen.dart';
-import 'package:learnengo/Widget/My_Button.dart';
+import 'package:learnengo/Screens/register/Register.dart';
 
-import '../Widget/app_Icon.dart';
+import '../Widget/My_Button.dart';
 
-class welcomeScreen extends StatefulWidget {
-  const welcomeScreen({super.key});
+class onBoardingFinish extends StatefulWidget {
+  const onBoardingFinish({super.key});
 
   @override
-  State<welcomeScreen> createState() => _welcomeScreenState();
+  State<onBoardingFinish> createState() => _onBoardingFinishState();
 }
 
-class _welcomeScreenState extends State<welcomeScreen> with Nav_Helper {
+class _onBoardingFinishState extends State<onBoardingFinish> with Nav_Helper {
   @override
   Widget build(BuildContext context) {
     final AppLocalizations appLocale = AppLocalizations.of(context)!;
@@ -27,28 +27,24 @@ class _welcomeScreenState extends State<welcomeScreen> with Nav_Helper {
           child: Column(
             children: [
               SizedBox(height: 220.h),
-              const app_Icon(), // This is a custom widget that should returns the app_icon but with added border radius (Didn't work to import it as an SVG)
+              SvgPicture.asset(
+                'assets/images/svgs/01.svg',
+                width: 160.w,
+                height: 160.h,
+              ),
               SizedBox(height: 40.h),
               Text(
-                'LearnEngo',
-                style: TextStyle(
-                    color: Theme.of(context).colorScheme.primary,
-                    fontSize: 32.sp,
-                    fontWeight: FontWeight.bold),
-              ),
-              SizedBox(height: 8.h),
-              Text(
-                appLocale.mainScreenText,
+                appLocale.createAnAccountNow,
                 textAlign: TextAlign.center,
                 style: Theme.of(context).textTheme.bodyMedium,
               ),
               const Spacer(),
               My_Button(
-                  buttonText: appLocale.getStarted,
-                  onTap: () => jump(context, const onBoardingScreen())),
+                  buttonText: appLocale.createProfile,
+                  onTap: () => jump(context, const register())),
               SizedBox(height: 20.h),
               My_Button(
-                buttonText: appLocale.iAlreadyHaveAnAccount,
+                buttonText: appLocale.skip,
                 textColor: Theme.of(context).colorScheme.primary,
                 buttonColor: Theme.of(context).colorScheme.secondary,
                 onTap: () => jump(context, const loginScreen()),
