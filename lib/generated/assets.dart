@@ -2,6 +2,24 @@
 class Assets {
   Assets._();
 
+  static const String bottomNavBarDashboard =
+      'assets/images/bottomNavBar/dashboard.svg';
+  static const String bottomNavBarDashboardoutlined =
+      'assets/images/bottomNavBar/dashboardoutlined.svg';
+  static const String bottomNavBarHome = 'assets/images/bottomNavBar/home.svg';
+  static const String bottomNavBarHomeoutlined =
+      'assets/images/bottomNavBar/homeoutlined.svg';
+  static const String bottomNavBarProfile =
+      'assets/images/bottomNavBar/profile.svg';
+  static const String bottomNavBarProfileoutlined =
+      'assets/images/bottomNavBar/profileoutlined.svg';
+  static const String bottomNavBarRank = 'assets/images/bottomNavBar/rank.svg';
+  static const String bottomNavBarRankoutlined =
+      'assets/images/bottomNavBar/rankoutlined.svg';
+  static const String bottomNavBarSearch =
+      'assets/images/bottomNavBar/search.svg';
+  static const String bottomNavBarSearchoutlined =
+      'assets/images/bottomNavBar/searchoutlined.svg';
   static const String fontsNunitoBold = 'assets/fonts/Nunito-Bold.ttf';
   static const String fontsNunitoLight = 'assets/fonts/Nunito-Light.ttf';
   static const String fontsNunitoMedium = 'assets/fonts/Nunito-Medium.ttf';
@@ -17,6 +35,7 @@ class Assets {
   static const String svgs08 = 'assets/images/svgs/08.svg';
   static const String svgs09 = 'assets/images/svgs/09.svg';
   static const String svgs10 = 'assets/images/svgs/10.svg';
+  static const String svgsAddLanguage = 'assets/images/svgs/addLanguage.svg';
   static const String svgsAppLogo = 'assets/images/svgs/app_logo.svg';
   static const String svgsApple = 'assets/images/svgs/apple.svg';
   static const String svgsBag = 'assets/images/svgs/bag.svg';
@@ -27,8 +46,10 @@ class Assets {
   static const String svgsCap = 'assets/images/svgs/cap.svg';
   static const String svgsChart = 'assets/images/svgs/chart.svg';
   static const String svgsCheck = 'assets/images/svgs/check.svg';
-  static const String svgsCheckBox = 'assets/images/svgs/checkboximage.svg';
+  static const String svgsCheckboximage =
+      'assets/images/svgs/checkboximage.svg';
   static const String svgsClock = 'assets/images/svgs/clock.svg';
+  static const String svgsDark = 'assets/images/svgs/dark.svg';
   static const String svgsDescription = 'assets/images/svgs/description.svg';
   static const String svgsEye = 'assets/images/svgs/eye.svg';
   static const String svgsEyeoff = 'assets/images/svgs/eyeoff.svg';
@@ -36,10 +57,15 @@ class Assets {
   static const String svgsGoogle = 'assets/images/svgs/google.svg';
   static const String svgsIN = 'assets/images/svgs/IN.svg';
   static const String svgsKR = 'assets/images/svgs/KR.svg';
+  static const String svgsLight = 'assets/images/svgs/light.svg';
   static const String svgsMC = 'assets/images/svgs/MC.svg';
+  static const String svgsNotification = 'assets/images/svgs/notification.svg';
   static const String svgsPlane = 'assets/images/svgs/plane.svg';
   static const String svgsPlugin = 'assets/images/svgs/plugin.svg';
+  static const String svgsPolygon = 'assets/images/svgs/polygon.svg';
   static const String svgsSmile = 'assets/images/svgs/smile.svg';
+  static const String svgsStreak = 'assets/images/svgs/streak.svg';
+  static const String svgsThemeChange = 'assets/images/svgs/themeChange.svg';
   static const String svgsUS = 'assets/images/svgs/US.svg';
   static const String svgsVnFlag = 'assets/images/svgs/vnFlag.svg';
 }
