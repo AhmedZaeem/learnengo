@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:learnengo/Helpers/Nav_Helper.dart';
+import 'package:learnengo/Screens/Home.dart';
+import 'package:learnengo/Screens/login/loginScreen.dart';
 import 'package:learnengo/Screens/welcomeScreen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../Widget/app_Icon.dart';
 
@@ -14,11 +17,35 @@ class splashScreen extends StatefulWidget {
 }
 
 class _splashScreenState extends State<splashScreen> with Nav_Helper {
+  bool noBoarding = false;
+  boardingSelection() async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    var x = preferences.getBool('noBoarding');
+    if (x != null) {
+      noBoarding = x;
+    }
+    x = preferences.getBool('autoLogin');
+    if (x != null) {
+      autoLogin = x;
+    }
+  }
+
+  bool autoLogin = false;
+
   @override
   void initState() {
     super.initState();
-    Future.delayed(const Duration(seconds: 4),
-        () => jump(context, const welcomeScreen(), replace: true));
+    boardingSelection();
+    Future.delayed(
+        const Duration(seconds: 4),
+        () => jump(
+            context,
+            autoLogin
+                ? const Home()
+                : noBoarding
+                    ? const loginScreen()
+                    : const welcomeScreen(),
+            replace: true));
   }
 
   @override

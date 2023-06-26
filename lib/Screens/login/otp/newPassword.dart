@@ -1,12 +1,13 @@
-import 'package:custom_check_box/custom_check_box.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:learnengo/Helpers/Nav_Helper.dart';
-import 'package:learnengo/Screens/Home.dart';
+import 'package:learnengo/Widget/MyCheckBox.dart';
 import 'package:learnengo/Widget/MyInput.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../Widget/My_Button.dart';
+import '../../Home.dart';
 
 class newPassword extends StatefulWidget {
   const newPassword({super.key});
@@ -24,6 +25,11 @@ class _newPasswordState extends State<newPassword> with Nav_Helper {
     super.initState();
     c1 = TextEditingController();
     c2 = TextEditingController();
+  }
+
+  setBoolData(String key, bool data) async {
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    preferences.setBool(key, data);
   }
 
   @override
@@ -102,33 +108,33 @@ class _newPasswordState extends State<newPassword> with Nav_Helper {
               },
             ),
             SizedBox(height: 20.h),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                SizedBox(
-                  width: 20.w,
-                  height: 20.h,
-                  child: CustomCheckBox(
-                    borderRadius: 8.r,
-                    borderWidth: 0,
-                    checkBoxSize: 20.w,
-                    checkedFillColor: Theme.of(context).colorScheme.primary,
-                    value: rememberMe,
-                    onChanged: (value) => setState(
-                      () {
-                        rememberMe = !rememberMe;
-                      },
-                    ),
+            InkWell(
+              onTap: () {
+                setState(() {
+                  rememberMe = !rememberMe;
+                });
+              },
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(
+                    width: 20.w,
+                    height: 20.h,
+                    child: MyCheckBox(checked: rememberMe),
                   ),
-                ),
-                SizedBox(width: 8.w),
-                Text(appLocale.rememberMe),
-              ],
+                  SizedBox(width: 8.w),
+                  Text(appLocale.rememberMe),
+                ],
+              ),
             ),
             const Spacer(),
             My_Button(
               buttonText: appLocale.continueBTNText,
-              onTap: () => jump(context, const Home(), replace: true),
+              onTap: () {
+                setBoolData('autoLogin', rememberMe);
+                jump(context, const Home(), replace: true);
+              },
               enabled: enabled,
             )
           ],

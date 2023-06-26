@@ -27,6 +27,7 @@ class Assets {
   static const String svgsCap = 'assets/images/svgs/cap.svg';
   static const String svgsChart = 'assets/images/svgs/chart.svg';
   static const String svgsCheck = 'assets/images/svgs/check.svg';
+  static const String svgsCheckBox = 'assets/images/svgs/checkboximage.svg';
   static const String svgsClock = 'assets/images/svgs/clock.svg';
   static const String svgsDescription = 'assets/images/svgs/description.svg';
   static const String svgsEye = 'assets/images/svgs/eye.svg';
