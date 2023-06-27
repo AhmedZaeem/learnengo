@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:learnengo/Helpers/Nav_Helper.dart';
-import 'package:learnengo/Screens/Home.dart';
+import 'package:learnengo/Screens/MainMenu.dart';
 import 'package:learnengo/Screens/login/forgotPassword.dart';
 import 'package:learnengo/Widget/MyInput.dart';
 import 'package:learnengo/Widget/My_Button.dart';
@@ -148,7 +148,7 @@ class _loginScreenState extends State<loginScreen> with Nav_Helper {
                   }
                   if (passwordError == null && emailError == null) {
                     setBoolData('autoLogin', rememberMe);
-                    jump(context, const Home(), replace: true);
+                    jump(context, const MainMenu(), replace: true);
                   }
                 },
               ),

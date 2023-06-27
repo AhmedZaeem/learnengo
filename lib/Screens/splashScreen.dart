@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:learnengo/Helpers/Nav_Helper.dart';
-import 'package:learnengo/Screens/Home.dart';
+import 'package:learnengo/Screens/MainMenu.dart';
 import 'package:learnengo/Screens/login/loginScreen.dart';
 import 'package:learnengo/Screens/welcomeScreen.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -41,7 +41,7 @@ class _splashScreenState extends State<splashScreen> with Nav_Helper {
         () => jump(
             context,
             autoLogin
-                ? const Home()
+                ? const MainMenu()
                 : noBoarding
                     ? const loginScreen()
                     : const welcomeScreen(),

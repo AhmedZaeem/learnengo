@@ -7,7 +7,7 @@ import 'package:learnengo/Widget/MyInput.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../Widget/My_Button.dart';
-import '../../Home.dart';
+import '../../MainMenu.dart';
 
 class newPassword extends StatefulWidget {
   const newPassword({super.key});
@@ -133,7 +133,7 @@ class _newPasswordState extends State<newPassword> with Nav_Helper {
               buttonText: appLocale.continueBTNText,
               onTap: () {
                 setBoolData('autoLogin', rememberMe);
-                jump(context, const Home(), replace: true);
+                jump(context, const MainMenu(), replace: true);
               },
               enabled: enabled,
             )

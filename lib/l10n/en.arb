@@ -73,5 +73,21 @@
  "createNewPassword" : "Create new password",
  "newPasswordMsg" : "Save the new password in a safe place, if you forget it then you have to do a forgot password again.",
  "confirmANewPassword" : "Confirm a new password",
- "yourPassword" : "Your password"
+ "yourPassword" : "Your password",
+ "skipAhead" : "skip ahead",
+ "level1": "Greeting",
+ "level2": "City",
+ "level3": "Dish",
+ "level4": "Airport",
+ "level5": "Hotel",
+ "level6": "Occupation",
+ "level7": "Teacher",
+ "level8": "Technology",
+ "level9": "Science",
+ "level10": "Transportation",
+ "level11": "Weather",
+ "level12": "Nature",
+ "level13": "Months, holidays",
+ "level14": "Plant",
+ "level15": "Eat and drink"
 }

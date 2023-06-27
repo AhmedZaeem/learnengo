@@ -25,6 +25,22 @@ class Assets {
   static const String fontsNunitoMedium = 'assets/fonts/Nunito-Medium.ttf';
   static const String fontsNunitoRegular = 'assets/fonts/Nunito-Regular.ttf';
   static const String fontsNunitoSemiBold = 'assets/fonts/Nunito-SemiBold.ttf';
+  static const String imagesBtnMask = 'assets/images/btnMask.png';
+  static const String levelsLevel1 = 'assets/images/levels/level1.svg';
+  static const String levelsLevel10 = 'assets/images/levels/level10.svg';
+  static const String levelsLevel11 = 'assets/images/levels/level11.svg';
+  static const String levelsLevel12 = 'assets/images/levels/level12.svg';
+  static const String levelsLevel13 = 'assets/images/levels/level13.svg';
+  static const String levelsLevel14 = 'assets/images/levels/level14.svg';
+  static const String levelsLevel15 = 'assets/images/levels/level15.svg';
+  static const String levelsLevel2 = 'assets/images/levels/level2.svg';
+  static const String levelsLevel3 = 'assets/images/levels/level3.svg';
+  static const String levelsLevel4 = 'assets/images/levels/level4.svg';
+  static const String levelsLevel5 = 'assets/images/levels/level5.svg';
+  static const String levelsLevel6 = 'assets/images/levels/level6.svg';
+  static const String levelsLevel7 = 'assets/images/levels/level7.svg';
+  static const String levelsLevel8 = 'assets/images/levels/level8.svg';
+  static const String levelsLevel9 = 'assets/images/levels/level9.svg';
   static const String svgs01 = 'assets/images/svgs/01.svg';
   static const String svgs02 = 'assets/images/svgs/02.svg';
   static const String svgs03 = 'assets/images/svgs/03.svg';
@@ -39,6 +55,8 @@ class Assets {
   static const String svgsAppLogo = 'assets/images/svgs/app_logo.svg';
   static const String svgsApple = 'assets/images/svgs/apple.svg';
   static const String svgsBag = 'assets/images/svgs/bag.svg';
+  static const String svgsButtonDecoration =
+      'assets/images/svgs/buttonDecoration.svg';
   static const String svgsC1 = 'assets/images/svgs/c1.svg';
   static const String svgsC2 = 'assets/images/svgs/c2.svg';
   static const String svgsC3 = 'assets/images/svgs/c3.svg';
@@ -51,18 +69,24 @@ class Assets {
   static const String svgsClock = 'assets/images/svgs/clock.svg';
   static const String svgsDark = 'assets/images/svgs/dark.svg';
   static const String svgsDescription = 'assets/images/svgs/description.svg';
+  static const String svgsDisabledMedal =
+      'assets/images/svgs/disabledMedal.svg';
   static const String svgsEye = 'assets/images/svgs/eye.svg';
   static const String svgsEyeoff = 'assets/images/svgs/eyeoff.svg';
   static const String svgsFacebook = 'assets/images/svgs/facebook.svg';
   static const String svgsGoogle = 'assets/images/svgs/google.svg';
   static const String svgsIN = 'assets/images/svgs/IN.svg';
   static const String svgsKR = 'assets/images/svgs/KR.svg';
+  static const String svgsLeftToRight = 'assets/images/svgs/leftToRight.svg';
   static const String svgsLight = 'assets/images/svgs/light.svg';
+  static const String svgsLine = 'assets/images/svgs/line.svg';
   static const String svgsMC = 'assets/images/svgs/MC.svg';
+  static const String svgsMedal1 = 'assets/images/svgs/medal1.svg';
   static const String svgsNotification = 'assets/images/svgs/notification.svg';
   static const String svgsPlane = 'assets/images/svgs/plane.svg';
   static const String svgsPlugin = 'assets/images/svgs/plugin.svg';
   static const String svgsPolygon = 'assets/images/svgs/polygon.svg';
+  static const String svgsRightToLeft = 'assets/images/svgs/rightToLeft.svg';
   static const String svgsSmile = 'assets/images/svgs/smile.svg';
   static const String svgsStreak = 'assets/images/svgs/streak.svg';
   static const String svgsThemeChange = 'assets/images/svgs/themeChange.svg';

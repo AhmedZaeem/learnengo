@@ -39,12 +39,12 @@ class _gridViewItemState extends State<gridViewItem> {
                       width: 2,
                       color: widget.borderColor!,
                     )
-                  : widget.selectedIndex == widget.itemIndex
-                      ? Border.all(
-                          width: 2,
-                          color: Theme.of(context).colorScheme.primary,
-                        )
-                      : const Border(),
+                  : Border.all(
+                      width: 2,
+                      color: widget.selectedIndex == widget.itemIndex
+                          ? Theme.of(context).colorScheme.primary
+                          : Colors.transparent,
+                    ),
             ),
             padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 5.h),
             child: Container(

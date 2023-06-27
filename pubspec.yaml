@@ -69,6 +69,7 @@ flutter:
     - assets/images/
     - assets/images/svgs/
     - assets/images/bottomNavBar/
+    - assets/images/levels/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
