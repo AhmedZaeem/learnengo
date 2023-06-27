@@ -46,7 +46,7 @@ class _onBoardingFinishState extends State<onBoardingFinish> with Nav_Helper {
               My_Button(
                 buttonText: appLocale.skip,
                 textColor: Theme.of(context).colorScheme.primary,
-                buttonColor: Theme.of(context).colorScheme.secondary,
+                buttonColor: Theme.of(context).colorScheme.onTertiary,
                 onTap: () => jump(context, const loginScreen()),
               ),
               SizedBox(height: 62.h),

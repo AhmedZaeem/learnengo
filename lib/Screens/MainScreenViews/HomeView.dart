@@ -96,8 +96,7 @@ class _HomeViewState extends State<HomeView> {
                     ),
                   ),
                   Padding(
-                    padding:
-                        EdgeInsets.symmetric(horizontal: 24.w, vertical: 6.h),
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
                     child: ListView.separated(
                       physics: const NeverScrollableScrollPhysics(),
                       shrinkWrap: true,

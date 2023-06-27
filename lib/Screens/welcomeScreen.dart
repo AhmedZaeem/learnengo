@@ -50,7 +50,7 @@ class _welcomeScreenState extends State<welcomeScreen> with Nav_Helper {
               My_Button(
                 buttonText: appLocale.iAlreadyHaveAnAccount,
                 textColor: Theme.of(context).colorScheme.primary,
-                buttonColor: Theme.of(context).colorScheme.secondary,
+                buttonColor: Theme.of(context).colorScheme.onTertiary,
                 onTap: () => jump(context, const loginScreen()),
               ),
               SizedBox(height: 62.h),
