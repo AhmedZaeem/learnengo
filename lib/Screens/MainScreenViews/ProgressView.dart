@@ -47,11 +47,18 @@ class _ProgressViewState extends State<ProgressView> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(appLocale.progress),
+                  Text(
+                    appLocale.progress,
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                          fontWeight: FontWeight.w700,
+                          color: Theme.of(context).scaffoldBackgroundColor,
+                        ),
+                  ),
                   IconButton(
                     onPressed: () {},
-                    icon: const Icon(
+                    icon: Icon(
                       Icons.notifications_none,
+                      color: Theme.of(context).scaffoldBackgroundColor,
                     ),
                   )
                 ],
@@ -70,15 +77,16 @@ class _ProgressViewState extends State<ProgressView> {
               SizedBox(height: 12.h),
               Text(
                 name,
-                style: Theme.of(context)
-                    .textTheme
-                    .headlineMedium
-                    ?.copyWith(fontWeight: FontWeight.w600),
+                style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+                      fontWeight: FontWeight.w600,
+                      color: Theme.of(context).scaffoldBackgroundColor,
+                    ),
               ),
               SizedBox(height: 2.h),
               Text(
                 level,
-                style: Theme.of(context).textTheme.bodySmall,
+                style: Theme.of(context).textTheme.bodySmall?.copyWith(
+                    color: Theme.of(context).scaffoldBackgroundColor),
               ),
               SizedBox(height: 20.h),
               Row(
@@ -101,9 +109,7 @@ class _ProgressViewState extends State<ProgressView> {
               shrinkWrap: true,
               itemBuilder: (context, index) {
                 return InkWell(
-                  onTap: () {
-                    
-                  },
+                  onTap: () {},
                   borderRadius: BorderRadius.circular(16.r),
                   child: Container(
                     height: 80.h,
