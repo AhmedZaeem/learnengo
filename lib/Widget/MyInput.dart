@@ -4,17 +4,25 @@ import 'package:flutter_svg/svg.dart';
 
 class MyInput extends StatefulWidget {
   final String? hint;
+  final Color? hintColor;
   final String? onErrorMessage;
   final bool start;
   final String? label;
   final bool isPassword;
+  final Color? fillColor;
+  final bool hasBoarder;
   bool isObscure;
   final TextEditingController? controller;
   final TextInputType? keyboard;
   final String? suffix;
+  final Function(String value)? onSubmit;
   final Function(dynamic value)? onChange;
   MyInput(
       {super.key,
+      this.onSubmit,
+      this.hintColor,
+      this.hasBoarder = true,
+      this.fillColor,
       this.label,
       this.isPassword = false,
       this.isObscure = false,
@@ -34,6 +42,7 @@ class _MyInputState extends State<MyInput> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onSubmitted: widget.onSubmit,
       controller: widget.controller,
       obscureText: widget.isObscure,
       obscuringCharacter: '*',
@@ -49,6 +58,8 @@ class _MyInputState extends State<MyInput> {
   }
 
   InputDecoration get _decoration => InputDecoration(
+        fillColor: widget.fillColor,
+        filled: widget.fillColor != null,
         errorText: widget.onErrorMessage,
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: widget.suffix == '' && !widget.isPassword
@@ -76,15 +87,20 @@ class _MyInputState extends State<MyInput> {
                   ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(12.r),
-          borderSide: BorderSide(
-            width: 1.w,
-            color: Theme.of(context).colorScheme.onSurface,
-          ),
+          borderSide: widget.hasBoarder
+              ? BorderSide(
+                  width: 1.w,
+                  color: Theme.of(context).colorScheme.onSurface,
+                )
+              : BorderSide.none,
         ),
         isDense: true,
         label: Text(widget.label ?? ''),
         labelStyle: Theme.of(context).textTheme.labelSmall,
         hintText: widget.hint,
-        hintStyle: Theme.of(context).textTheme.bodySmall,
+        hintStyle: Theme.of(context)
+            .textTheme
+            .bodySmall
+            ?.copyWith(color: widget.hintColor),
       );
 }

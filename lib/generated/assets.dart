@@ -92,6 +92,7 @@ class Assets {
   static const String svgsPlugin = 'assets/images/svgs/plugin.svg';
   static const String svgsPolygon = 'assets/images/svgs/polygon.svg';
   static const String svgsRightToLeft = 'assets/images/svgs/rightToLeft.svg';
+  static const String svgsSearch = 'assets/images/svgs/search.svg';
   static const String svgsSmile = 'assets/images/svgs/smile.svg';
   static const String svgsStreak = 'assets/images/svgs/streak.svg';
   static const String svgsThemeChange = 'assets/images/svgs/themeChange.svg';

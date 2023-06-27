@@ -98,5 +98,6 @@
  "games" : "Games ",
  "reviewingKnowledgeThroughGames" : "Reviewing knowledge through games",
  "takeAMockTest" : "Take a mock test",
- "onBackTermsAndDefinitions" : "On back terms and definitions"
+ "onBackTermsAndDefinitions" : "On back terms and definitions",
+ "wordSearchHint" : "Enter the keyword you want to search"
 }

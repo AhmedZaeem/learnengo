@@ -80,7 +80,7 @@ class _HomeViewState extends State<HomeView> {
                           padding: EdgeInsetsDirectional.only(
                               end: index == 4 ? 220.w : 0,
                               start: index == 9 ? 200.w : 0,
-                              top: index == 5 || index == 10 ? 110.h : 0),
+                              top: index == 5 || index == 10 ? 106.h : 0),
                           child: SvgPicture.asset(
                             'assets/images/svgs/${index == 4 || index == 9 ? 'line' : index % 2 == 0 ? 'leftToRight' : 'rightToLeft'}.svg',
                             color: index == 4 || index == 9
