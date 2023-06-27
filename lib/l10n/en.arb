@@ -89,5 +89,14 @@
  "level12": "Nature",
  "level13": "Months, holidays",
  "level14": "Plant",
- "level15": "Eat and drink"
+ "level15": "Eat and drink",
+ "progress" : "Progress",
+ "totalXP" : "Total XP",
+ "studyTime" : "Study Time",
+ "learn" : "Learn",
+ "exam" : "Exam",
+ "games" : "Games ",
+ "reviewingKnowledgeThroughGames" : "Reviewing knowledge through games",
+ "takeAMockTest" : "Take a mock test",
+ "onBackTermsAndDefinitions" : "On back terms and definitions"
 }

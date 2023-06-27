@@ -52,9 +52,11 @@ class Assets {
   static const String svgs09 = 'assets/images/svgs/09.svg';
   static const String svgs10 = 'assets/images/svgs/10.svg';
   static const String svgsAddLanguage = 'assets/images/svgs/addLanguage.svg';
+  static const String svgsAlarm = 'assets/images/svgs/alarm.svg';
   static const String svgsAppLogo = 'assets/images/svgs/app_logo.svg';
   static const String svgsApple = 'assets/images/svgs/apple.svg';
   static const String svgsBag = 'assets/images/svgs/bag.svg';
+  static const String svgsBooks = 'assets/images/svgs/books.svg';
   static const String svgsButtonDecoration =
       'assets/images/svgs/buttonDecoration.svg';
   static const String svgsC1 = 'assets/images/svgs/c1.svg';
@@ -71,9 +73,12 @@ class Assets {
   static const String svgsDescription = 'assets/images/svgs/description.svg';
   static const String svgsDisabledMedal =
       'assets/images/svgs/disabledMedal.svg';
+  static const String svgsEgame = 'assets/images/svgs/egame.svg';
+  static const String svgsExam = 'assets/images/svgs/exam.svg';
   static const String svgsEye = 'assets/images/svgs/eye.svg';
   static const String svgsEyeoff = 'assets/images/svgs/eyeoff.svg';
   static const String svgsFacebook = 'assets/images/svgs/facebook.svg';
+  static const String svgsFlash = 'assets/images/svgs/flash.svg';
   static const String svgsGoogle = 'assets/images/svgs/google.svg';
   static const String svgsIN = 'assets/images/svgs/IN.svg';
   static const String svgsKR = 'assets/images/svgs/KR.svg';
