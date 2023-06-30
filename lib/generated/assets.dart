@@ -80,6 +80,8 @@ class Assets {
   static const String svgsFacebook = 'assets/images/svgs/facebook.svg';
   static const String svgsFlash = 'assets/images/svgs/flash.svg';
   static const String svgsGoogle = 'assets/images/svgs/google.svg';
+  static const String svgsGreenBookIcon =
+      'assets/images/svgs/greenBookIcon.svg';
   static const String svgsIN = 'assets/images/svgs/IN.svg';
   static const String svgsKR = 'assets/images/svgs/KR.svg';
   static const String svgsLeftToRight = 'assets/images/svgs/leftToRight.svg';
@@ -95,7 +97,10 @@ class Assets {
   static const String svgsSearch = 'assets/images/svgs/search.svg';
   static const String svgsSmile = 'assets/images/svgs/smile.svg';
   static const String svgsStreak = 'assets/images/svgs/streak.svg';
+  static const String svgsStreakIcon = 'assets/images/svgs/streakIcon.svg';
+  static const String svgsTarget = 'assets/images/svgs/target.svg';
   static const String svgsThemeChange = 'assets/images/svgs/themeChange.svg';
+  static const String svgsTop = 'assets/images/svgs/top.svg';
   static const String svgsUS = 'assets/images/svgs/US.svg';
   static const String svgsVnFlag = 'assets/images/svgs/vnFlag.svg';
 }

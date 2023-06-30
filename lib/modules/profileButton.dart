@@ -1,8 +1,8 @@
-class profileButton {
+class progressButton {
   String icon;
   String title;
   String subTitle;
 
-  profileButton(
+  progressButton(
       {required this.icon, required this.title, required this.subTitle});
 }

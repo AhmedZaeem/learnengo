@@ -99,5 +99,13 @@
  "reviewingKnowledgeThroughGames" : "Reviewing knowledge through games",
  "takeAMockTest" : "Take a mock test",
  "onBackTermsAndDefinitions" : "On back terms and definitions",
- "wordSearchHint" : "Enter the keyword you want to search"
+ "wordSearchHint" : "Enter the keyword you want to search",
+ "addFriends" : "Add Friends",
+ "followers" : "Followers",
+ "following"  : "Following",
+ "statistical": "Statistical",
+ "challenges" : "Challenges",
+ "level": "Level",
+ "overview" : "Overview"
+
 }

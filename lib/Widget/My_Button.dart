@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class My_Button extends StatefulWidget {
   final Function()? onTap;
+  final double buttonRadius;
+  final double textPadding;
   final Color? buttonColor;
   final Color textColor;
   final String buttonText;
@@ -11,6 +13,8 @@ class My_Button extends StatefulWidget {
   const My_Button(
       {required this.buttonText,
       this.enabled = true,
+      this.textPadding = 0,
+      this.buttonRadius = 16,
       this.height,
       this.textColor = Colors.white,
       this.buttonColor,
@@ -34,16 +38,20 @@ class _My_ButtonState extends State<My_Button> {
           color: !widget.enabled
               ? Theme.of(context).colorScheme.onSurface
               : widget.buttonColor ?? Theme.of(context).colorScheme.primary,
-          borderRadius: BorderRadius.circular(16.r),
+          borderRadius: BorderRadius.circular(widget.buttonRadius.r),
         ),
-        child: Text(
-          widget.buttonText,
-          style: TextStyle(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: widget.textPadding),
+          child: Text(
+            widget.buttonText,
+            style: TextStyle(
               fontSize: 20.sp,
               color: !widget.enabled
                   ? Theme.of(context).colorScheme.onBackground
                   : widget.textColor,
-              fontWeight: FontWeight.w600),
+              fontWeight: FontWeight.w600,
+            ),
+          ),
         ),
       ),
     );

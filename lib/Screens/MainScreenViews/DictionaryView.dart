@@ -45,7 +45,6 @@ class _DictionaryViewState extends State<DictionaryView> {
   final dMSAJson = DictionaryMSAFlutter();
   late DictEntry _entry = DictEntry('', [], [], []);
   bool searched = false;
-
   @override
   Widget build(BuildContext context) {
     AppLocalizations appLocale = AppLocalizations.of(context)!;
@@ -82,12 +81,6 @@ class _DictionaryViewState extends State<DictionaryView> {
                   )
                 : const SizedBox.shrink(),
             SizedBox(height: 20.h),
-            searched
-                ? Text(
-                    'Examples : \n ${_entry.meanings}',
-                    style: Theme.of(context).textTheme.headlineSmall,
-                  )
-                : const SizedBox.shrink(),
           ],
         ),
       ),

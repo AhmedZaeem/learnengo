@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:learnengo/Widget/statisticsView.dart';
 import 'package:learnengo/modules/profileButton.dart';
 import 'package:learnengo/temp.dart';
 
@@ -17,16 +18,16 @@ class _ProgressViewState extends State<ProgressView> {
   @override
   Widget build(BuildContext context) {
     AppLocalizations appLocale = AppLocalizations.of(context)!;
-    List<profileButton> buttons = [
-      profileButton(
+    List<progressButton> buttons = [
+      progressButton(
           icon: 'books',
           title: appLocale.learn,
           subTitle: appLocale.onBackTermsAndDefinitions),
-      profileButton(
+      progressButton(
           icon: 'exam',
           title: appLocale.exam,
           subTitle: appLocale.takeAMockTest),
-      profileButton(
+      progressButton(
           icon: 'egame',
           title: appLocale.games,
           subTitle: appLocale.reviewingKnowledgeThroughGames),
@@ -91,10 +92,10 @@ class _ProgressViewState extends State<ProgressView> {
               SizedBox(height: 20.h),
               Row(
                 children: [
-                  _buildProgress(
+                  statisticsView(
                       icon: 'flash', title: appLocale.totalXP, subTitle: '76%'),
                   SizedBox(width: 16.w),
-                  _buildProgress(
+                  statisticsView(
                       icon: 'alarm',
                       title: appLocale.studyTime,
                       subTitle: '50'),
@@ -159,48 +160,6 @@ class _ProgressViewState extends State<ProgressView> {
               itemCount: buttons.length),
         )
       ],
-    );
-  }
-
-  Widget _buildProgress(
-      {required String icon, required String title, required String subTitle}) {
-    return Expanded(
-      child: Container(
-        height: 76.h,
-        decoration: BoxDecoration(
-          color: Theme.of(context).scaffoldBackgroundColor,
-          borderRadius: BorderRadius.circular(12.r),
-        ),
-        child: Row(
-          children: [
-            SizedBox(width: 20.w),
-            SvgPicture.asset(
-              'assets/images/svgs/$icon.svg',
-              height: 30.h,
-            ),
-            SizedBox(width: 12.w),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    title,
-                    style: Theme.of(context).textTheme.bodySmall,
-                  ),
-                  Text(
-                    subTitle,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineMedium
-                        ?.copyWith(fontSize: 20.sp),
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
-      ),
     );
   }
 }
