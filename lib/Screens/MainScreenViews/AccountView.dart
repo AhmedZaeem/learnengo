@@ -31,7 +31,7 @@ class _AccountViewState extends State<AccountView> {
     return ListView(
       shrinkWrap: true,
       children: [
-        SizedBox(height: 53.h),
+        SizedBox(height: 24.h),
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 24.w),
           child: Row(children: [
@@ -41,13 +41,15 @@ class _AccountViewState extends State<AccountView> {
             ),
             const Spacer(),
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Scaffold.of(context).openEndDrawer();
+                },
                 icon: const Icon(
                   Icons.more_horiz,
                 )),
           ]),
         ),
-        SizedBox(height: 24.h),
+        SizedBox(height: 16.h),
         Align(
           alignment: Alignment.center,
           child: Stack(
@@ -63,7 +65,7 @@ class _AccountViewState extends State<AccountView> {
                     CachedNetworkImage(imageUrl: profile1, fit: BoxFit.cover),
               ),
               PositionedDirectional(
-                start: 65.w,
+                start: 55.w,
                 top: 65.h,
                 child: IconButton(
                   onPressed: () {},
@@ -192,10 +194,10 @@ class _AccountViewState extends State<AccountView> {
               ),
               SizedBox(height: 10.h),
               Divider(
-                indent: 20.w,
-                endIndent: 20.w,
+                indent: 10.w,
+                endIndent: 10.w,
                 height: 1.h,
-                thickness: 1,
+                thickness: .5,
                 color: Theme.of(context).colorScheme.onBackground,
               ),
               SizedBox(height: 16.h),

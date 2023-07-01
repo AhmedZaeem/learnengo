@@ -106,6 +106,17 @@
  "statistical": "Statistical",
  "challenges" : "Challenges",
  "level": "Level",
- "overview" : "Overview"
+ "overview" : "Overview",
+ "settings" : "Settings",
+ "profile" : "Profile",
+ "notification" : "Notification",
+ "darkMode" : "Dark mode",
+ "contactUs" : "Contact us",
+ "aboutEngo" : "About Engo",
+ "logOut" : "Log out",
+ "logOutConfirmMsg" : "Are you sure you want to log out?",
+ "logOutDialogTitle" : "LogOut",
+ "yes" : "Yes",
+ "no" : "No"
 
 }
