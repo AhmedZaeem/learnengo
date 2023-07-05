@@ -1,12 +1,16 @@
+import 'dart:io';
+
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:learnengo/Helpers/ImagePickerHelper.dart';
 import 'package:learnengo/Widget/My_Button.dart';
 import 'package:learnengo/Widget/statisticsView.dart';
 import 'package:learnengo/modules/statisticsViewModule.dart';
 
+import '../../Widget/buildBottomSheetChoice.dart';
 import '../../modules/FlTitles.dart';
 import '../../temp.dart';
 
@@ -17,7 +21,8 @@ class AccountView extends StatefulWidget {
   State<AccountView> createState() => _AccountViewState();
 }
 
-class _AccountViewState extends State<AccountView> {
+class _AccountViewState extends State<AccountView> with ImagePickerHelper {
+  File? myImage;
   @override
   Widget build(BuildContext context) {
     AppLocalizations appLocale = AppLocalizations.of(context)!;
@@ -61,14 +66,57 @@ class _AccountViewState extends State<AccountView> {
                 decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     color: Theme.of(context).scaffoldBackgroundColor),
-                child:
-                    CachedNetworkImage(imageUrl: profile1, fit: BoxFit.cover),
+                child: myImage == null
+                    ? CachedNetworkImage(imageUrl: profile1, fit: BoxFit.cover)
+                    : Image.file(
+                        myImage!,
+                        fit: BoxFit.cover,
+                      ),
               ),
               PositionedDirectional(
                 start: 55.w,
                 top: 65.h,
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () async {
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) {
+                        return Padding(
+                          padding: EdgeInsets.symmetric(
+                              vertical: 70.h, horizontal: 30.w),
+                          child: Row(
+                            children: [
+                              buildBottomSheetChoice(
+                                  text: 'Camera',
+                                  icon: Icons.camera,
+                                  onTap: () async {
+                                    var img = await pickImage(fromCamera: true);
+                                    if (img != null) {
+                                      setState(() {
+                                        myImage = img;
+                                      });
+                                    }
+                                    Navigator.pop(context);
+                                  }),
+                              SizedBox(width: 32.w),
+                              buildBottomSheetChoice(
+                                  text: 'Gallery',
+                                  icon: Icons.photo_library,
+                                  onTap: () async {
+                                    var img = await pickImage();
+                                    if (img != null) {
+                                      setState(() {
+                                        myImage = img;
+                                      });
+                                    }
+                                    Navigator.pop(context);
+                                  }),
+                            ],
+                          ),
+                        );
+                      },
+                    );
+                  },
                   icon: Icon(Icons.camera_alt,
                       color: Theme.of(context).colorScheme.primary),
                 ),
@@ -152,7 +200,7 @@ class _AccountViewState extends State<AccountView> {
               mainAxisSpacing: 20.h,
             ),
             itemBuilder: (context, index) {
-              return statisticsView(
+              return StatisticsView(
                 title: statistics[index].title,
                 hasBorder: true,
                 mainTextStyle: Theme.of(context)
@@ -183,7 +231,7 @@ class _AccountViewState extends State<AccountView> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(
-                    'Overview',
+                    appLocale.overview,
                     style: Theme.of(context).textTheme.headlineSmall,
                   ),
                   Text(
@@ -210,7 +258,7 @@ class _AccountViewState extends State<AccountView> {
               )
             ],
           ),
-        )
+        ),
       ],
     );
   }
@@ -244,6 +292,7 @@ class _AccountViewState extends State<AccountView> {
           )
         ],
       ));
+
   Widget _buildMyIconButton({required IconData icon, Function()? onTap}) {
     return Container(
       decoration: BoxDecoration(

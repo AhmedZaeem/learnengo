@@ -5,8 +5,9 @@ import 'package:learnengo/Helpers/Nav_Helper.dart';
 import 'package:learnengo/Screens/MainMenu.dart';
 import 'package:learnengo/Screens/login/loginScreen.dart';
 import 'package:learnengo/Screens/welcomeScreen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:learnengo/enums.dart';
 
+import '../CachedController.dart';
 import '../Widget/app_Icon.dart';
 
 class splashScreen extends StatefulWidget {
@@ -17,25 +18,14 @@ class splashScreen extends StatefulWidget {
 }
 
 class _splashScreenState extends State<splashScreen> with Nav_Helper {
-  bool noBoarding = false;
-  boardingSelection() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    var x = preferences.getBool('noBoarding');
-    if (x != null) {
-      noBoarding = x;
-    }
-    x = preferences.getBool('autoLogin');
-    if (x != null) {
-      autoLogin = x;
-    }
-  }
-
-  bool autoLogin = false;
-
   @override
   void initState() {
     super.initState();
-    boardingSelection();
+    bool autoLogin =
+        CachedController.cache.getData(sharedPrefrencesKeys.autoLogin) ?? false;
+    bool noBoarding =
+        CachedController.cache.getData(sharedPrefrencesKeys.noBoarding) ??
+            false;
     Future.delayed(
         const Duration(seconds: 4),
         () => jump(

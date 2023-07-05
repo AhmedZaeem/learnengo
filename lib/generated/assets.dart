@@ -73,6 +73,7 @@ class Assets {
   static const String svgsDescription = 'assets/images/svgs/description.svg';
   static const String svgsDisabledMedal =
       'assets/images/svgs/disabledMedal.svg';
+  static const String svgsDob = 'assets/images/svgs/dob.svg';
   static const String svgsEgame = 'assets/images/svgs/egame.svg';
   static const String svgsExam = 'assets/images/svgs/exam.svg';
   static const String svgsEye = 'assets/images/svgs/eye.svg';

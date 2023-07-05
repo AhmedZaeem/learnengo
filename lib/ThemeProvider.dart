@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:learnengo/CachedController.dart';
+import 'package:learnengo/enums.dart';
 
 class ThemeProvider extends ChangeNotifier {
   String currentTheme = 'system';
@@ -15,18 +16,14 @@ class ThemeProvider extends ChangeNotifier {
   }
 
   changeTheme(String theme) async {
-    final SharedPreferences _prefs = await SharedPreferences.getInstance();
-
-    await _prefs.setString('theme', theme);
-
+    CachedController.cache.setData(sharedPrefrencesKeys.theme, theme);
     currentTheme = theme;
     notifyListeners();
   }
 
   initialize() async {
-    final SharedPreferences _prefs = await SharedPreferences.getInstance();
-
-    currentTheme = _prefs.getString('theme') ?? 'system';
+    currentTheme =
+        CachedController.cache.getData(sharedPrefrencesKeys.theme) ?? 'system';
     notifyListeners();
   }
 }

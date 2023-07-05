@@ -7,8 +7,9 @@ import 'package:learnengo/Screens/login/forgotPassword.dart';
 import 'package:learnengo/Widget/MyInput.dart';
 import 'package:learnengo/Widget/My_Button.dart';
 import 'package:learnengo/Widget/socialMediaLogin.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:learnengo/enums.dart';
 
+import '../../CachedController.dart';
 import '../../Widget/MyCheckBox.dart';
 
 class loginScreen extends StatefulWidget {
@@ -21,15 +22,13 @@ class loginScreen extends StatefulWidget {
 class _loginScreenState extends State<loginScreen> with Nav_Helper {
   late TextEditingController passwordController;
   late TextEditingController emailController;
-  setBoolData(String key, bool data) async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    preferences.setBool(key, data);
+  setBoolData() async {
+    CachedController.cache.setData(sharedPrefrencesKeys.loginFirst, true);
     loginFirst = true;
   }
 
   boardingSelection() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    var x = preferences.getBool('noBoarding');
+    var x = CachedController.cache.getData(sharedPrefrencesKeys.noBoarding);
     if (x != null) {
       setState(() {
         loginFirst = x;
@@ -44,7 +43,7 @@ class _loginScreenState extends State<loginScreen> with Nav_Helper {
   void initState() {
     super.initState();
     boardingSelection();
-    setBoolData('noBoarding', true);
+    CachedController.cache.setData(sharedPrefrencesKeys.noBoarding, true);
     passwordController = TextEditingController();
     emailController = TextEditingController();
   }
@@ -147,7 +146,8 @@ class _loginScreenState extends State<loginScreen> with Nav_Helper {
                     passwordError = null;
                   }
                   if (passwordError == null && emailError == null) {
-                    setBoolData('autoLogin', rememberMe);
+                    CachedController.cache
+                        .setData(sharedPrefrencesKeys.autoLogin, rememberMe);
                     jump(context, const MainMenu(), replace: true);
                   }
                 },

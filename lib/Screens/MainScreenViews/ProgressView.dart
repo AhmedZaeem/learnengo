@@ -92,13 +92,19 @@ class _ProgressViewState extends State<ProgressView> {
               SizedBox(height: 20.h),
               Row(
                 children: [
-                  statisticsView(
-                      icon: 'flash', title: appLocale.totalXP, subTitle: '76%'),
+                  Expanded(
+                    child: StatisticsView(
+                        icon: 'flash',
+                        title: appLocale.totalXP,
+                        subTitle: '76%'),
+                  ),
                   SizedBox(width: 16.w),
-                  statisticsView(
-                      icon: 'alarm',
-                      title: appLocale.studyTime,
-                      subTitle: '50'),
+                  Expanded(
+                    child: StatisticsView(
+                        icon: 'alarm',
+                        title: appLocale.studyTime,
+                        subTitle: '50'),
+                  ),
                 ],
               ),
             ],

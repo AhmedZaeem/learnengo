@@ -164,6 +164,7 @@ class _registerState extends State<register> with Nav_Helper {
                           jump(context, const welcomeAfterSignUp(),
                               replace: true);
                         } else {
+                          FocusScope.of(context).nextFocus();
                           index++;
                           enabled = false;
                           check = '';

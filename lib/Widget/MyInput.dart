@@ -11,14 +11,18 @@ class MyInput extends StatefulWidget {
   final bool isPassword;
   final Color? fillColor;
   final bool hasBoarder;
+  final bool readOnly;
   bool isObscure;
   final TextEditingController? controller;
   final TextInputType? keyboard;
   final String? suffix;
+  final Function()? onTap;
   final Function(String value)? onSubmit;
   final Function(dynamic value)? onChange;
   MyInput(
       {super.key,
+      this.onTap,
+      this.readOnly = false,
       this.onSubmit,
       this.hintColor,
       this.hasBoarder = true,
@@ -42,12 +46,14 @@ class _MyInputState extends State<MyInput> {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onTap: widget.onTap,
       onSubmitted: widget.onSubmit,
       controller: widget.controller,
       obscureText: widget.isObscure,
       obscuringCharacter: '*',
       decoration: _decoration,
       autofocus: widget.start,
+      readOnly: widget.readOnly,
       keyboardType: widget.keyboard,
       onChanged: (value) {
         setState(() {

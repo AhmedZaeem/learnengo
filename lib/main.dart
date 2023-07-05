@@ -3,10 +3,14 @@ import 'package:flutter_gen/gen_l10n/app_localization.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
+import 'CachedController.dart';
 import 'Screens/splashScreen.dart';
 import 'ThemeProvider.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await CachedController().initCache();
+
   runApp(
     ChangeNotifierProvider<ThemeProvider>(
       create: (_) => ThemeProvider()..initialize(),
