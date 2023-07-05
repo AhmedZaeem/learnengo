@@ -79,6 +79,8 @@ class Assets {
   static const String svgsEye = 'assets/images/svgs/eye.svg';
   static const String svgsEyeoff = 'assets/images/svgs/eyeoff.svg';
   static const String svgsFacebook = 'assets/images/svgs/facebook.svg';
+  static const String svgsFire = 'assets/images/svgs/fire.svg';
+  static const String svgsFlag = 'assets/images/svgs/flag.svg';
   static const String svgsFlash = 'assets/images/svgs/flash.svg';
   static const String svgsGoogle = 'assets/images/svgs/google.svg';
   static const String svgsGreenBookIcon =

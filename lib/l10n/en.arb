@@ -137,5 +137,7 @@
  "followUsOnFacebook" : "Follow us on Facebook",
  "followUsOnInstagram" : "Follow us on Instagram",
  "followUsOnTwitter" : "Follow us on Twitter",
- "shareEngo": "Share Engo"
+ "shareEngo": "Share Engo",
+ "nextGoal" : "Next goal",
+ "daysStraight" : "Days straight"
 }
