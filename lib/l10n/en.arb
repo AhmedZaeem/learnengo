@@ -139,5 +139,9 @@
  "followUsOnTwitter" : "Follow us on Twitter",
  "shareEngo": "Share Engo",
  "nextGoal" : "Next goal",
- "daysStraight" : "Days straight"
+ "daysStraight" : "Days straight",
+ "ranking" : "Ranking",
+ "weekly" : "Weekly",
+ "monthly" : "Monthly",
+ "allTime": "All time"
 }

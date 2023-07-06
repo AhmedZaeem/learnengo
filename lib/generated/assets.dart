@@ -96,6 +96,9 @@ class Assets {
   static const String svgsPlane = 'assets/images/svgs/plane.svg';
   static const String svgsPlugin = 'assets/images/svgs/plugin.svg';
   static const String svgsPolygon = 'assets/images/svgs/polygon.svg';
+  static const String svgsRank1 = 'assets/images/svgs/rank1.svg';
+  static const String svgsRank2 = 'assets/images/svgs/rank2.svg';
+  static const String svgsRank3 = 'assets/images/svgs/rank3.svg';
   static const String svgsRightToLeft = 'assets/images/svgs/rightToLeft.svg';
   static const String svgsSearch = 'assets/images/svgs/search.svg';
   static const String svgsSmile = 'assets/images/svgs/smile.svg';
@@ -104,6 +107,9 @@ class Assets {
   static const String svgsTarget = 'assets/images/svgs/target.svg';
   static const String svgsThemeChange = 'assets/images/svgs/themeChange.svg';
   static const String svgsTop = 'assets/images/svgs/top.svg';
+  static const String svgsTop1 = 'assets/images/svgs/top1.svg';
+  static const String svgsTop2 = 'assets/images/svgs/top2.svg';
+  static const String svgsTop3 = 'assets/images/svgs/top3.svg';
   static const String svgsUS = 'assets/images/svgs/US.svg';
   static const String svgsVnFlag = 'assets/images/svgs/vnFlag.svg';
 }
