@@ -53,12 +53,16 @@ class _RankingViewState extends State<RankingView> {
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
                 Text(
                   appLocale.ranking,
-                  style: Theme.of(context)
-                      .textTheme
-                      .headlineSmall
-                      ?.copyWith(fontWeight: FontWeight.bold),
+                  style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
                 ),
-                Icon(Icons.notifications_none, size: 24.h),
+                Icon(
+                  Icons.notifications_none,
+                  size: 24.h,
+                  color: Colors.white,
+                ),
               ]),
               SizedBox(height: 20.h),
               Stack(
@@ -176,7 +180,13 @@ class _RankingViewState extends State<RankingView> {
                             );
                           },
                           separatorBuilder: (context, index) {
-                            return SizedBox(height: 50.h);
+                            return Divider(
+                              height: 40.h,
+                              thickness: 1.w,
+                              indent: 20.w,
+                              endIndent: 20.w,
+                              color: Theme.of(context).colorScheme.onSurface,
+                            );
                           },
                           itemCount: profiles.length),
                     ),
@@ -200,7 +210,7 @@ class _RankingViewState extends State<RankingView> {
                   ? 150.h
                   : 180.h,
           start: rank == 1
-              ? 125.w
+              ? 135.w
               : rank == 2
                   ? 25.w
                   : 225.w,
@@ -211,7 +221,14 @@ class _RankingViewState extends State<RankingView> {
                 backgroundImage: NetworkImage(profiles[rank - 1].imageUrl),
               ),
               SizedBox(height: 8.h),
-              Text(profiles[rank - 1].name),
+              Text(
+                profiles[rank - 1].name,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ],
           ),
         ),
@@ -282,6 +299,7 @@ class _RankingViewState extends State<RankingView> {
                   style: TextStyle(
                     fontSize: 20.sp,
                     fontWeight: FontWeight.bold,
+                    color: Colors.white,
                   ),
                 ),
                 SizedBox(height: 7.h),
@@ -297,7 +315,11 @@ class _RankingViewState extends State<RankingView> {
                   child: Text(
                     '${profiles[rank - 1].xp} XP',
                     style: TextStyle(
-                      color: Theme.of(context).colorScheme.primary,
+                      color: rank == 1
+                          ? const Color(0xffFAAE57)
+                          : rank == 2
+                              ? const Color(0xff688DE9)
+                              : const Color(0xffE9CF68),
                       fontSize: 10.sp,
                       fontWeight: FontWeight.w600,
                     ),
